@@ -19,7 +19,6 @@ const HomePage = () => {
     axios({method: 'get', url: `${baseUrl}/api/projects`, headers: {'Authorization': token }})
       .then(response => {
         setCollections(response.data);
-        console.log(response.data);
       })
       .catch(error => console.log('error', error));
   },[]);
