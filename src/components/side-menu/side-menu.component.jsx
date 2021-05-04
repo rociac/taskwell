@@ -11,7 +11,7 @@ import { baseUrl } from '../../utils/utils';
 import styles from './side-menu.module.scss'
 
 const SideMenu = ({ open }) => {
-  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const isLoggedIn = useSelector(state => state.isLoggedIn.isLoggedIn);
   const user = useSelector(state => state.user.currentUser);
   const dispatch = useDispatch();
   const history = useHistory();
