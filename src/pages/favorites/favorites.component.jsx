@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 import axios from 'axios';
 
 import { setTitle } from '../../redux/title/title.actions';
@@ -8,10 +9,18 @@ import { baseUrl } from '../../utils/utils';
 
 import Collections from '../../components/collections/collections.component';
 
+import styles from './favorites.module.scss';
+
 
 const Favorites = () => {
+  const history = useHistory();
   const [projects, setProjects] = useState([]);
   const dispatch = useDispatch();
+  const user = useSelector(state => state.user.currentUser);
+
+  if(!user) {
+    history.push('/signin');
+  }
 
   useEffect(() => {
     const token = 'Bearer ' + localStorage.getItem('jwt');
@@ -28,6 +37,10 @@ const Favorites = () => {
 
   return(
     <div>
+      {
+        projects.length === 0 &&
+        <h2 className={styles.centered}>You don't have any favorites!</h2>
+      }
       <Collections projects={projects} />
     </div>
   )

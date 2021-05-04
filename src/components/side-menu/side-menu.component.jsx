@@ -30,14 +30,17 @@ const SideMenu = ({ open }) => {
 
   return (
     <div className={`${styles.sideMenu} ${open ? styles.opened : null}`}>
-      <div className={styles.userInfo}>
-        <div className={styles.imageContainer}>
-          <img className={styles.avatar} src={user.avatar_url} alt=""/>
+    {     
+      user && 
+        <div className={styles.userInfo}>
+          <div className={styles.imageContainer}>
+            <img className={styles.avatar} src={user.avatar_url} alt=""/>
+          </div>
+          <p className={styles.name}>{`${user.first_name} ${user.last_name}`}</p>
+          <p className={styles.userName}>&#64;{user.username}</p>
         </div>
-        <p className={styles.name}>{`${user.first_name} ${user.last_name}`}</p>
-        <p className={styles.userName}>&#64;{user.username}</p>
-      </div>
-      <div className={styles.navigation}>
+    }
+      <div className={`${styles.navigation} ${!user && styles.centered}`}>
         <Link className={styles.link} to="/">Home</Link>
         <Link className={styles.link} to="/projects">My projects</Link>
         <Link className={styles.link} to="/favorites">Favorites</Link>

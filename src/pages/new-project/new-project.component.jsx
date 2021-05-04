@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -15,6 +15,11 @@ import styles from './new-project.module.scss';
 const NewProject = () => {
   const history = useHistory();
   const dispatch = useDispatch();
+  const user = useSelector(state => state.user.currentUser);
+
+  if(!user) {
+    history.push('/signin');
+  }
 
   useEffect(() => {
     dispatch(setTitle('Add New Project'))
