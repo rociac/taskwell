@@ -1,0 +1,27 @@
+.burger {
+  margin-top: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  div {
+    width: 2rem;
+    height: 2px;
+    border-radius: 1rem;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    background: #b3b3b4;
+    margin-bottom: 0.5rem;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.fade {
+  opacity: 0;
+}

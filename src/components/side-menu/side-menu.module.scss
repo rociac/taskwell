@@ -1,0 +1,82 @@
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: left;
+  padding: 2rem 0 2rem 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  width: 50%;
+  transform: translateX(-100%);
+  z-index: 10;
+  background-color: #F7F5FA;
+}
+
+.opened {
+  transform: translateX(0);
+}
+
+.link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.link:last-child {
+  margin-bottom: 0;
+}
+
+.link:visited {
+  color: black;
+}
+
+.userInfo {
+  width: 100%;
+}
+
+.imageContainer {
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 3.5rem;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.userName {
+  font-size: 1.3rem;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.authLink {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  border-top: 1px solid rgb(216, 216, 216);
+  width: 14rem;
+  padding-top: 2rem;
+}
