@@ -15,7 +15,7 @@ const ProjectDetails = ({ name, type, description, liveLink, image }) => {
           <p className={styles.type}>{type}</p>
         </div>
         <p className={styles.description}>{description}</p>
-        <p className={styles.link}>Visit the project here: <a href={liveLink}>{liveLink}</a></p>
+        <p className={styles.link}>Visit the project <a href={liveLink}>here</a></p>
       </div>
     </div>
   )
