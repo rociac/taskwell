@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './project-details.module.scss';
 
@@ -19,6 +20,14 @@ const ProjectDetails = ({ name, type, description, liveLink, image }) => {
       </div>
     </div>
   )
+};
+
+ProjectDetails.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  liveLink: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 };
 
 export default ProjectDetails;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import styles from './project-link.module.scss';
 
@@ -16,5 +17,12 @@ const ProjectLink = ({ to, name, image, type }) => (
     </div>
   </div>
 );
+
+ProjectLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
+};
 
 export default ProjectLink;

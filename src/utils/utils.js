@@ -10,7 +10,7 @@ export const  fetchCurrentUser = () => {
   
   if(localStorage.getItem('jwt')) {
     const token = 'Bearer ' + localStorage.getItem('jwt');
-    axios({method: 'get', url: 'http://localhost:3000/current_user', headers: {'Authorization': token }})
+    axios({method: 'get', url: `${baseUrl}/current_user`, headers: {'Authorization': token }})
       .then(response => {
         return response.data;
       })

@@ -15,6 +15,7 @@ import styles from './favorites.module.scss';
 const Favorites = () => {
   const history = useHistory();
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector(state => state.user.currentUser);
 
@@ -29,6 +30,7 @@ const Favorites = () => {
         setProjects(response.data);
       })
       .catch(error => console.log('error', error));
+      setLoading(true);
   }, []);
 
   useEffect(() => {
@@ -41,7 +43,9 @@ const Favorites = () => {
         projects.length === 0 &&
         <h2 className={styles.centered}>You don't have any favorites!</h2>
       }
-      <Collections projects={projects} />
+      {
+        loading ? <p>Loading...</p> : <Collections projects={projects} />
+      }
     </div>
   )
 };

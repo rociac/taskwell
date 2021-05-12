@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
+import PropTypes from 'prop-types';
 
 import { setLoggedIn } from '../../redux/auth/auth.actions';
 
@@ -55,6 +56,10 @@ const SideMenu = ({ open }) => {
     </div>
   ) 
    
-}
+};
+
+SideMenu.propTypes = {
+  open: PropTypes.bool.isRequired
+};
 
 export default SideMenu;

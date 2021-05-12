@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectLink from '../project-link/project-link.component';
+import PropTypes from 'prop-types';
 
 import styles from './collections.module.scss';
 
@@ -20,6 +21,10 @@ const Collections = ({ projects }) => {
       }
     </div>
   )
+};
+
+Collections.propTypes = {
+  projects: PropTypes.array.isRequired
 };
 
 export default Collections;

@@ -44,7 +44,8 @@ const Project = ({ match }) => {
     axios({method: 'post', url: `${baseUrl}/api/favorite_projects`, params: {
       project_id: id
     }, headers: {'Authorization': token }})
-      .then(() => {
+      .then((response) => {
+        console.log(response);
         setAlreadyFavorited(true);
       })
       .catch(error => console.log('error', error));
