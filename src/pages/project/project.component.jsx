@@ -61,8 +61,6 @@ const Project = ({ match }) => {
       .catch(error => console.log('error', error));
   }
 
-  console.log(alreadyFavorited);
-
   return(
     <div className={styles.container}>
     {

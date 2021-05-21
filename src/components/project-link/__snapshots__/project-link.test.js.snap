@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project Link renders properly with props 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="imageContainer"
+  >
+    <img
+      alt="project-preview"
+      className="image"
+      src="www.example.com/image"
+    />
+  </div>
+  <div
+    className="textContainer"
+  >
+    <a
+      className="link"
+      href="/www.example.com"
+      onClick={[Function]}
+    >
+      <p
+        className="title"
+      >
+        Test Project
+      </p>
+    </a>
+    <p
+      className="type"
+    >
+      Software
+    </p>
+  </div>
+</div>
+`;

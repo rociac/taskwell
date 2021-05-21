@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collections Renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="imageContainer"
+    >
+      <img
+        alt="project-preview"
+        className="image"
+      />
+    </div>
+    <div
+      className="textContainer"
+    >
+      <a
+        className="link"
+        href="/projects/1"
+        onClick={[Function]}
+      >
+        <p
+          className="title"
+        >
+          Test Project
+        </p>
+      </a>
+      <p
+        className="type"
+      />
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="imageContainer"
+    >
+      <img
+        alt="project-preview"
+        className="image"
+      />
+    </div>
+    <div
+      className="textContainer"
+    >
+      <a
+        className="link"
+        href="/projects/2"
+        onClick={[Function]}
+      >
+        <p
+          className="title"
+        >
+          Test Project 2
+        </p>
+      </a>
+      <p
+        className="type"
+      />
+    </div>
+  </div>
+</div>
+`;

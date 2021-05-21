@@ -30,10 +30,10 @@ const SideMenu = ({ open }) => {
   }
 
   return (
-    <div className={`${styles.sideMenu} ${open ? styles.opened : null}`}>
+    <div data-testid="menu" className={`${styles.sideMenu} ${open ? styles.opened : null}`}>
     {     
       user && 
-        <div className={styles.userInfo}>
+        <div data-testid="user" className={styles.userInfo}>
           <div className={styles.imageContainer}>
             <img className={styles.avatar} src={user.avatar_url} alt=""/>
           </div>

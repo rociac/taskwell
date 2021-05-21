@@ -12,7 +12,7 @@ const FormInput = ({ handleChange, label, ...otherProps}) => (
       </label>)
       : null
     }
-    <input className="form-input" onChange={handleChange} {...otherProps} />
+    <input data-testid="input" className="form-input" onChange={handleChange} {...otherProps} />
   </div>
 );
 

@@ -26,7 +26,7 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.container}>
           <BurgerIcon open={open} setOpen={setOpen} />
-          <p className={styles.text}>{`${title}`}</p>
+          <p data-testid="title" className={styles.text}>{`${title}`}</p>
           <Link to="/new-project"><FontAwesomeIcon icon={faPlus} className={styles.icon} /></Link>
         </div>
       </div>
