@@ -13,6 +13,7 @@ exports[`Collections Renders correctly 1`] = `
       <img
         alt="project-preview"
         className="image"
+        src="http://www.example.com/image"
       />
     </div>
     <div
@@ -31,7 +32,9 @@ exports[`Collections Renders correctly 1`] = `
       </a>
       <p
         className="type"
-      />
+      >
+        Software
+      </p>
     </div>
   </div>
   <div
@@ -43,6 +46,7 @@ exports[`Collections Renders correctly 1`] = `
       <img
         alt="project-preview"
         className="image"
+        src="http://www.example.com/image2"
       />
     </div>
     <div
@@ -61,7 +65,9 @@ exports[`Collections Renders correctly 1`] = `
       </a>
       <p
         className="type"
-      />
+      >
+        Software
+      </p>
     </div>
   </div>
 </div>

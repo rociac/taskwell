@@ -31,10 +31,13 @@ const Project = ({ match }) => {
     axios({method: 'get', url: `${baseUrl}/api/user_favorites`, headers: {'Authorization': token}})
       .then(response => {
         const favorites = response.data;
-        if(favorites.find(favorite => favorite.id === project.id)) {
-          setAlreadyFavorited(true);
-        } else {
-          setAlreadyFavorited(false);
+        if(project) {
+          const favorited = !!favorites.find(favorite => favorite.id === project.id);
+          if(favorited) {
+            setAlreadyFavorited(true);
+          } else {
+            setAlreadyFavorited(false);
+          }
         }
       })
       .catch(error => console.log('error', error));
@@ -44,8 +47,7 @@ const Project = ({ match }) => {
     axios({method: 'post', url: `${baseUrl}/api/favorite_projects`, params: {
       project_id: id
     }, headers: {'Authorization': token }})
-      .then((response) => {
-        console.log(response);
+      .then(() => {
         setAlreadyFavorited(true);
       })
       .catch(error => console.log('error', error));

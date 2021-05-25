@@ -11,14 +11,14 @@ describe('Collections', () => {
     {
       id: 1,
       name: 'Test Project',
-      image: 'http://www.example.com/image',
-      type: 'Software'
+      image_url: 'http://www.example.com/image',
+      project_type: 'Software'
     },
     {
       id: 2,
       name: 'Test Project 2',
-      image: 'http://www.example.com/image2',
-      type: 'Software'
+      image_url: 'http://www.example.com/image2',
+      project_type: 'Software'
     }
   ];
   it('Renders correctly', () => {
