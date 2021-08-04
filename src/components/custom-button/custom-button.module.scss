@@ -1,0 +1,18 @@
+button {
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+
+.orange {
+  background-color: #FF5617;
+  color: white;
+  box-shadow: 0px 46px 125px 0px rgba(255,86,23,0.64);
+  -webkit-box-shadow: 0px 46px 125px 0px rgba(255,86,23,0.64);
+  -moz-box-shadow: 0px 46px 125px 0px rgba(255,86,23,0.64);
+}
+
+.round {
+  border-radius: 3rem;
+  width: 10rem;
+}
