@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.form-input {
+  width: 25rem;
+  height: 3.8rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  background: none;
+  border: 1.5px solid rgb(165, 165, 165);
+  padding: 1rem;
+  text-align: center;
+
+  &:active {
+    border-color: #FF5617;
+    color: #FF5617;
+    background: none;
+  }
+
+  &:focus {
+    border-color: #FF5617;
+    color: #FF5617;
+    background: none;
+  }
+}

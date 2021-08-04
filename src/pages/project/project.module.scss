@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.orange {
+  background-color: #FF5617;
+  color: white;
+}
+
+.red {
+  background-color: #ff1717;
+  color: white;
+}
+
+.large {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.fixedBottom {
+  position: absolute;
+  bottom: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-radius: 0;
+}
